@@ -58,6 +58,9 @@ body {
 .navbar a:hover {
   color: #ffffff;
 }
+#menu-toggle {
+  display: none;
+}
 
 /* ===========================
    BANNER PRINCIPAL
