@@ -1,11 +1,15 @@
-/* RESET */
+/* ===========================
+   RESET GENERAL
+=========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY GENERAL */
+/* ===========================
+   BODY GENERAL
+=========================== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
@@ -14,14 +18,18 @@ body {
   scroll-behavior: smooth;
 }
 
-/* CONTAINER GENERAL */
+/* ===========================
+   CONTENEDOR PRINCIPAL
+=========================== */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* NAVBAR */
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar {
   background-color: #1b1b1b;
   padding: 1rem 2rem;
@@ -36,6 +44,7 @@ body {
   list-style: none;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -49,25 +58,86 @@ body {
   color: #ffffff;
 }
 
-/* BANNER */
+/* ===========================
+   BANNER PRINCIPAL
+=========================== */
 .banner {
-  background: linear-gradient(to right, #0a0a0a, #1e1e1e);
-  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #000000, #003300);
+  padding: 2rem 2rem;
   text-align: center;
-  border-bottom: 3px solid #00ff99;
-}
-
-.banner h1 {
-  font-size: 3rem;
   color: #00ff99;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #00ff99;
 }
 
-.banner p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
+.banner-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px #00ff99;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  animation: flicker 3s linear infinite;
+  /* Para mejorar legibilidad */
+  text-shadow:
+    0 0 10px #00ff99,
+    0 0 20px #00ff99,
+    0 0 30px #00ff99,
+    0 0 40px #00ff99,
+    0 0 50px #003300,
+    0 0 60px #003300;
 }
 
-/* SECCIONES GENERALES */
+.banner-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #aaffcc;
+  font-style: italic;
+  text-shadow:
+    0 0 5px #00ff99,
+    0 0 10px #00ff99;
+}
+
+.banner-btn {
+  background-color: #00ff99;
+  color: #000;
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  box-shadow: 0 0 20px #00ff99;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.banner-btn:hover {
+  background-color: #00cc77;
+  box-shadow: 0 0 40px #00cc77;
+  transform: scale(1.1);
+}
+
+/* Animación flicker estilo neón */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px #00ff99,
+      0 0 10px #00ff99,
+      0 0 20px #00ff99,
+      0 0 40px #00ff99;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+}
+
+/* ===========================
+   SECCIONES GENERALES
+=========================== */
 .seccion {
   padding: 4rem 1rem;
   border-bottom: 1px solid #222;
@@ -94,7 +164,46 @@ body {
   margin-bottom: 1rem;
 }
 
-/* BOTÓN COPIAR */
+/* ===========================
+   MINI BANNER IP
+=========================== */
+.ip-banner {
+  background-color: #1a1a1a;
+  border: 2px solid #00ff99;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 255, 100, 0.1);
+}
+
+.ip-banner h3 {
+  color: #00ff99;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.ip-box {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ip-box span {
+  background-color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #00ff99;
+  font-size: 1.1rem;
+}
+
+/* ===========================
+   BOTONES GENERALES
+=========================== */
 button {
   background-color: #00ff99;
   border: none;
@@ -110,7 +219,9 @@ button:hover {
   background-color: #00cc77;
 }
 
-/* ENLACES */
+/* ===========================
+   ESTILOS PARA ENLACES
+=========================== */
 a {
   color: #1e90ff;
   text-decoration: none;
@@ -120,27 +231,41 @@ a:hover {
   text-decoration: underline;
 }
 
-/* LISTAS DE MODS */
+/* ===========================
+   LISTAS DE MODS
+=========================== */
 ul {
-  padding-left: 1.5rem;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-li strong {
+.mods-obligatorios ul li {
+  background-color: #1f1f1f;
+  border: 1px solid #2a2a2a;
+  border-left: 5px solid #00ff99;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.mods-obligatorios li strong {
+  display: block;
   color: #00ffcc;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
 }
 
-/* IP */
-.ip {
-  text-align: center;
-}
-
-#server-ip {
-  font-size: 1.4rem;
+.mods-obligatorios li a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1e90ff;
   font-weight: bold;
-  color: #00ff99;
 }
 
-/* SECCIÓN FINAL */
+/* ===========================
+   SECCION FINAL / UNITE
+=========================== */
 .final {
   text-align: center;
   padding: 3rem 1rem;
@@ -153,7 +278,86 @@ li strong {
   font-weight: bold;
 }
 
-/* RESPONSIVE */
+/* ===========================
+   INSTRUCCIONES
+=========================== */
+.instrucciones h3 {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: #00ff99;
+  border-bottom: 2px solid #00ff99;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.instrucciones p {
+  background-color: #1b1b1b;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #00ff99;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease;
+}
+
+.instrucciones p:hover {
+  background-color: #262626;
+}
+
+.instrucciones code {
+  background-color: #000;
+  color: #00ffcc;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+/* ===========================
+   BANNER FINAL / UNITE
+=========================== */
+.unite-banner {
+  background: linear-gradient(135deg, #1a1a1a, #202020, #121212);
+  text-align: center;
+  padding: 4rem 2rem;
+  border-top: 3px solid #00ff99;
+  border-bottom: 3px solid #00ff99;
+  position: relative;
+  overflow: hidden;
+}
+
+.unite-banner h2 {
+  font-size: 2.5rem;
+  color: #00ff99;
+  margin-bottom: 1rem;
+}
+
+.unite-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.discord-btn {
+  background-color: #5865F2;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  box-shadow: 0 0 20px rgba(88, 101, 242, 0.5);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.discord-btn:hover {
+  background-color: #4752c4;
+  box-shadow: 0 0 30px rgba(88, 101, 242, 0.8);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+/* ===========================
+   RESPONSIVE (MOBILE)
+=========================== */
 @media (max-width: 600px) {
   .navbar ul {
     flex-direction: column;
@@ -162,5 +366,65 @@ li strong {
 
   .banner h1 {
     font-size: 2rem;
+  }
+
+  .ip-box {
+    flex-direction: column;
+  }
+
+  .ip-box span {
+    font-size: 1rem;
+  }
+}
+
+/* Botón hamburguesa */
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #00ff99;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1100;
+  user-select: none;
+}
+
+/* Responsive menú hamburguesa */
+@media (max-width: 600px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    position: fixed;
+    top: 3.5rem; /* justo debajo del botón */
+    right: 1.5rem; /* alineado con el botón */
+    background-color: #1b1b1b;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,255,153,0.5);
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1050;
+    width: max-content; /* ancho ajustado al contenido */
+    min-width: 150px;
+  }
+
+  /* Mostrar menú cuando está abierto */
+  .navbar.open ul {
+    display: flex;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 0.5rem;
   }
 }

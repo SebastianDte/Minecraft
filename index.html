@@ -10,40 +10,45 @@
 
   <!-- NAVBAR -->
   <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#ip">IP del servidor</a></li>
-        <li><a href="#mods">Mods</a></li>
-        <li><a href="#instrucciones">Instrucciones</a></li>
-        <li><a href="#unite">Unite</a></li>
-      </ul>
-    </nav>
-  </header>
+  <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#mods">Mods</a></li>
+      <li><a href="#instrucciones">Instrucciones</a></li>
+      <li><a href="#unite">Unite</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- BANNER -->
-  <section id="inicio" class="banner">
-    <div class="container">
-      <h1>🌍 Servidor Minecraft de Sebi</h1>
-      <p>¡Bienvenido al server más facha del país!</p>
-    </div>
-  </section>
+ <!-- BANNER -->
+<section id="inicio" class="banner">
+  <div class="container">
+    <h1 class="banner-title">Turre Village</h1>
+    <p class="banner-subtitle">¡El server más facha para picar bloques y tomar mate!</p>
+  </div>
+</section>
 
-  <!-- INFO PRINCIPAL -->
+ <!-- INFO PRINCIPAL -->
 <section class="seccion introduccion">
   <div class="container">
-    <p>En este servidor utilizamos <strong>mods obligatorios</strong>. Si no los tenés, no vas a poder entrar. También recomendamos algunos mods opcionales para mejorar la experiencia de juego.</p>
+    <p>Este servidor corre en <strong>Aternos</strong>, una plataforma gratuita que nos permite mantenerlo siempre listo para viciar sin gastar un peso.</p>
 
-    <p>La versión del juego es <strong>Minecraft 1.20.1</strong> con <strong>Forge 47.2.0</strong>.</p>
+    <p>Para poder jugar necesitás tener algunos <strong>mods obligatorios</strong>. Si no los tenés instalados, no vas a poder ingresar. También te recomendamos algunos mods opcionales que mejoran la experiencia, pero son totalmente opcionales.</p>
 
-    <p>Usamos <strong>Aternos</strong> como host, lo que nos permite mantener el servidor activo de forma gratuita.</p>
-
-    <p><a href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html" target="_blank">📥 Descargar Forge</a></p>
-
-    <p style="margin-top: 2rem;">
-      <span id="server-ip">mc.sebiarg.com</span>
-      <button onclick="copiarIP()">Copiar IP</button>
+    <p>Estamos usando <strong>Minecraft 1.20.1</strong> con <strong>Forge 47.4.0</strong>. Si todavía no lo tenés instalado, podés bajarlo desde acá:  
+      <a href="https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html" target="_blank">📥 Descargar Forge</a>
     </p>
+
+    <!-- Mini banner IP -->
+    <div class="ip-banner">
+      <h3>🚀 ¡Empezá a jugar!</h3>
+      <p>Conectate con esta IP:</p>
+      <div class="ip-box">
+        <span id="server-ip">Sebateunmatee.aternos.me</span>
+        <button onclick="copiarIP()">Copiar IP</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -51,44 +56,70 @@
   <section id="mods" class="seccion mods-obligatorios">
     <div class="container">
       <h2>📦 Mods Obligatorios</h2>
-      <ul>
-        <li>
-          <strong>EjemploMod</strong>: Mejora los gráficos. 
-          <a href="#" target="_blank">Descargar</a>
-        </li>
-        <!-- Más mods acá -->
-      </ul>
+<ul>
+  <li>
+    <strong>GlitchCore</strong>
+    Núcleo necesario para que funcionen otros mods del pack.  
+    <a href="https://www.curseforge.com/minecraft/mc-mods/glitchcore/files/5787839" target="_blank">📥 Descargar</a>
+  </li>
+  <li>
+    <strong>Serene Seasons</strong>
+    Agrega estaciones del año dinámicas (primavera, verano, otoño e invierno) que afectan el clima y los cultivos.
+    <a href="https://www.curseforge.com/minecraft/mc-mods/serene-seasons/files/6398227" target="_blank">📥 Descargar</a>
+  </li>
+  <li>
+    <strong>Small Ships</strong>
+    Añade barcos funcionales y navegables con distintos tamaños y diseños.
+    <a href="https://www.curseforge.com/minecraft/mc-mods/small-ships/files/5566900" target="_blank">📥 Descargar</a>
+  </li>
+  <li>
+    <strong>Tough As Nails</strong>
+    Introduce mecánicas de supervivencia como sed, temperatura corporal y estaciones más desafiantes.
+    <a href="https://www.curseforge.com/minecraft/mc-mods/tough-as-nails/files/5815863" target="_blank">📥 Descargar</a>
+  </li>
+</ul>
+<h2>🧩 Mods Opcionales <span style="font-size: 1rem; font-weight: normal;">(Próximamente)</span></h2>
+<ul>
+  <li>
+    <em>Muy pronto vas a poder descargar mods opcionales para mejorar aún más tu experiencia en el servidor.</em>
+  </li>
+</ul>
 
-      <h2>🧩 Mods Opcionales</h2>
-      <ul>
-        <li>
-          <strong>OptiFine</strong>: Optimiza rendimiento y mejora los FPS.
-          <a href="#" target="_blank">Descargar</a>
-        </li>
-        <!-- Más mods acá -->
-      </ul>
-    </div>
   </section>
 
   <!-- INSTRUCCIONES -->
-  <section id="instrucciones" class="seccion instrucciones">
-    <div class="container">
-      <h2>📋 Cómo instalar Forge y los Mods</h2>
-      <p>1. Instalá Forge ejecutando el archivo que descargaste.</p>
-      <p>2. Abrí el Minecraft Launcher y elegí el perfil de Forge.</p>
-      <p>3. Colocá los mods en la carpeta <code>.minecraft/mods</code>.</p>
-      <p>4. Iniciá el juego y entrá al servidor 😎</p>
-    </div>
-  </section>
+<section id="instrucciones" class="seccion instrucciones">
+  <div class="container">
+    <h2>📋 Instrucciones para jugar</h2>
 
-  <!-- UNITE -->
-  <section id="unite" class="seccion final">
-    <div class="container">
-      <h2>🚀 Unite al servidor</h2>
-      <p>¿Qué estás esperando? Sumate y viví la mejor experiencia Minecraft con nosotros.</p>
-      <p><a href="https://discord.gg/tu-link" target="_blank">👉 Unite a nuestro Discord</a></p>
-    </div>
-  </section>
+    <h3>⚙️ Cómo instalar Forge</h3>
+    <p>1. Descargá el instalador de Forge desde el enlace que aparece arriba en la sección de introducción.</p>
+    <p>2. Hacé doble clic en el archivo <code>.jar</code> que descargaste para abrirlo (necesitás tener Java instalado).</p>
+    <p>3. En la ventana que se abre, seleccioná la opción <strong>"Install client"</strong> y hacé clic en <strong>"Aceptar"</strong>.</p>
+    <p>4. Cuando termine, abrí el <strong>Minecraft Launcher</strong> y elegí el perfil que dice <strong>Forge</strong> en el selector de versiones (abajo a la izquierda) antes de darle a "Jugar".</p>
+
+    <h3>📦 Cómo instalar los Mods</h3>
+    <p>1. Presioná la tecla <strong>Windows + R</strong> al mismo tiempo para abrir la ventana de "Ejecutar".</p>
+    <p>2. Escribí <code>%appdata%</code> (así como está, con los símbolos) y presioná Enter.</p>
+    <p>3. Se te va a abrir una carpeta: entrá en la que se llama <code>.minecraft</code>.</p>
+    <p>4. Dentro de <code>.minecraft</code>, buscá o creá una carpeta nueva llamada <code>mods</code> (todo en minúsculas).</p>
+    <p>5. <strong>No instales los mods</strong>, simplemente copiá los archivos <code>.jar</code> que descargaste (los mods obligatorios) y pegá todos dentro de la carpeta <code>mods</code>.</p>
+    <p>6. Cerrá todo, abrí Minecraft con el perfil de Forge y listo. Si hiciste todo bien, el juego va a cargar con los mods y ya podés entrar al servidor.</p>
+  </div>
+</section>
+
+
+<!-- UNITE AL SERVIDOR -->
+<section id="unite" class="seccion unite-banner">
+  <div class="container">
+    <h2>🎮 Unite al servidor</h2>
+    <p>¿Qué estás esperando? Sumate a la comunidad y viví la mejor experiencia Minecraft con nosotros.</p>
+    <a class="discord-btn" href="https://dsc.gg/sebateunmate" target="_blank">🔥 Entrá al Discord</a>
+  </div>
+</section>
+
+  
+
 
   <!-- SCRIPT PARA COPIAR IP -->
   <script>
@@ -98,7 +129,27 @@
         alert("IP copiada al portapapeles!");
       });
     }
+
+    
   </script>
+
+ <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.querySelector('.navbar');
+  const navLinks = document.querySelectorAll('.navbar ul li a');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+  });
+
+  // Cerrar menú al hacer click en cualquier link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navbar.classList.remove('open');
+    });
+  });
+</script>
+
 
 </body>
 </html>
