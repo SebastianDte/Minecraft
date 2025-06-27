@@ -523,3 +523,9 @@ a:hover {
     display: inline-block;
   }
 }
+
+.instrucciones-paso {
+  margin-bottom: 3rem; /* espacio grande entre secciones */
+  padding-bottom: 1rem; /* un poco de respiración interna */
+  border-bottom: 1px solid #00ff99; /* opcional: línea sutil para separar */
+}
